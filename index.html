@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+        <a href="index.html" class="logo">Coffee&Book</a>
+
+        <div class="search-container">
+            <form action="#" method="get">
+                <input type="text" name="q" class="search-bar" placeholder="Pesquisar...">
+            </form>
+        </div>
+        
+
+        <nav>
+
+            <a href="conta.html">Conta</a>
+            <a href="pedidos.html">Pedidos</a>
+
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Categorias</a>
+                <div class="dropdown-content">
+                  <a href="livros.html">Livros</a>
+                  <a href="eletronicos.html">Eletrônicos</a>
+                  <a href="roupas.html">Roupas</a>
+                </div>
+              </div>
+
+
+            <a href="carrinho.html">Carrinho</a>
+
+        </nav>
+    </header><br><br>
+
+    <div class="imagem-container">
+            
+            <div class="imagem-item">
+                <img src="img/images.png" alt="Coraline">
+                <img src="img/omagicodeoz.png" alt="O mágico de oz">
+                <img src="img/senhordosaneis.png" alt="Senhor dos anéis">
+                <img src="img/vermelhobrancoesangueazul.png" alt="Vermelho, Branco e Sangue azul">
+            </div>
+
+            <div class="imagem-item">
+                <img src="img/harry_pedrafilosofal.png" alt="Harry Potter e a Pedra Filosofal">
+                <img src="img/harry_prisioneirodeazkaban.png" alt="Harry Potter e o Prisioneiro de Azkaban">
+                <img src="img/harry_reliquiasdamorte.png" alt="Harry Potter e as Reliquias da morte">
+                <img src="img/harry_calicedefogo.png" alt="Harry Potter e o Cálice de fogo">
+            </div>
+
+            <div class="imagem-item">
+                <img src="img/harry_camarasecreta.png" alt="Harry Potter e a Câmara secreta">
+                <img src="img/Harry_enigmadoprincipe.png" alt="Harry Potter e o Enigma do Príncipe">
+                <img src="img/harry_ordemdafenix.png" alt="Harry Potter e a Ordem da Fênix">
+                <img src="img/boxharry.png" alt="Box de livros/saga completa de Harry Potter">
+            </div>
+            
+            <div class="imagem-item">
+                <img src="img/velasescarlate.png" alt="Velas Escarlarte">
+                <img src="img/anne.png" alt="Diário de Anne Frank">
+                <img src="img/it.png" alt="It-A coisa">
+                <img src="img/opequenoprincipe.png" alt="O Pequeno Príncipe">
+            </div>
+
+
+            
+
+    <!-- filtro da barra de pesquisa -->
+            <script>
+  const searchInput = document.querySelector(".search-bar"); /*vê o q é escrito*/            
+  const imagens = document.querySelectorAll(".imagem-container img"); /*seleciona as imagens de acordo com o que digitado*/
+
+  searchInput.addEventListener("keyup", function () { /*identifica sempre que uma tecla é soltada*/
+    const termo = searchInput.value.toLowerCase(); /*seleciona o q é escrito e deixa minúsculo para evitar conflito*/ 
+
+        /*compara a descrição com as imagens*/
+    imagens.forEach(img => { 
+      const descricao = img.alt.toLowerCase();
+
+
+        /*verifica se as imagens combinam com a descrição e o filtro aplicado*/
+      if (descricao.includes(termo)) {
+        img.style.display = "inline-block";
+      } else {
+        img.style.display = "none";
+      }
+    });
+  });
+</script>
+
+
+            
+        
+
+    
+</body>
+</html>
