@@ -137,5 +137,13 @@ nav a, .dropbtn {
     display: block;
   }
 
-  
+#coraline-img {
+
+  width: 260px;
+  height: 360px;
+  float: left;
+  margin-left: 150px;
+  border-radius: 15px;
+
+}
 
